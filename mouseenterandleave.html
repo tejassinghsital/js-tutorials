@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .main-div {
+
+      width: 100 vw;
+      height: 100vh;
+      display: grid;
+      place-items: center;
+    }
+
+    #square {
+      height: 100px;
+      width: 100px;
+      background: grey;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main-div">
+    <div id="square" onmouseup="mUp()" onmousedown="mDown()" onmouseenter="mEnter()" onmouseleave="mLeave()"></div>
+  </div>
+
+
+  </div>
+  <script>
+    let mEnter = () => document.getElementById("square").style.background = "green";
+
+    let mUp = document.getElementById('square');
+    mUp.addEventListener('mouseup', () => mUp.style.background = "gold");
+
+    let mLeave = () => document.getElementById("square").style.background = "red";
+    let mDown = () => document.getElementById("square").style.background = "pink";
+  </script>
+
+</body>
+
+</html>

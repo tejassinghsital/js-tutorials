@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Date and Time setter methods milliseconds to actual time conversion using dom and browser instead of vscode
+  which gives o/p in miulliseconds locally.</title>
+</head>
+
+<body>
+ <p>Hello here see the conversion of setter time and date method into original date</p>
+ <button onclick="tFx()">For setted time</button>
+ <button onclick="dFx()">For setted date</button>
+ <button onclick="timefx()">Show only Time</button>
+ <button onclick="datefx()"> Show only date</button>
+
+ <p id="time"></p>
+ <p id="date"></p>
+ <p id="onlytime"></p>
+ <p id="onlydate"></p>
+
+</body>
+
+<script>
+ var tFx = () => {
+  let t = new Date();
+  t.setHours(6);
+  document.getElementById("time").innerHTML = t;
+
+ };
+
+ var dFx = () => {
+  let d = new Date();
+  d.setMonth(8);
+  d.setDate(19);
+  document.getElementById("date").innerHTML = d;
+ };
+
+
+ let timefx = setInterval(() => {
+  let ot = new Date().toLocaleTimeString();
+  document.getElementById("onlytime").innerHTML = ot;
+ }, 1000);
+
+ let datefx = () => {
+  let od = new Date().toLocaleDateString();
+  document.getElementById("onlydate").innerHTML = od;
+ };
+
+</script>
+
+</html>

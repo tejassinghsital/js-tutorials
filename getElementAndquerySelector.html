@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+</head>
+
+<body>
+
+ <p class="para">Sample 1 with class</p>
+ <p class="para">Sample 2 with class</p>
+ <p class="para">Sample 3 with class</p>
+
+ <p id="unique">Sample 1 with id</p>
+
+
+ <form action="">
+  <input type="radio" name="gender" id="" value="male">Male
+  <input type="radio" name="gender" id="" value="Female">Female
+  <input type="radio" name="gender" id="" value="Neutral">Neutral
+
+ </form>
+ <button onclick="changeFx()">click me</button>
+
+
+</body>
+
+<script>
+
+ let changeFx = () => {
+  //changing data
+
+  console.log(document.getElementsByClassName('para').innerHTML);
+
+ };
+
+</script>
+
+</html>

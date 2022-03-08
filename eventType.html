@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+</head>
+
+<body>
+
+
+ <button id="btnCheck1" onclick="alert('event type 1')">event inline alert</button>
+ <button id="btnCheck2" onclick="type2Fx()">event function on click</button>
+ <button id="btnCheck3">event function onclick with id reference</button>
+ <button id="btnCheck4">event addEventListener</button>
+
+
+
+
+ <script>
+
+  let type2Fx = () => {
+   alert(`event type 2`);
+  };
+
+  let btnCheck3 = document.getElementById('btnCheck3');
+  btnCheck3.onclick = () => {
+   alert(`event type 3`);//gets overwrite and perform only last instance
+  };
+
+  let btnCheck4 = document.querySelector('#btnCheck4');
+  btnCheck4.addEventListener('click', () => {
+   alert('event type 4');//not get overwrite in multiple instances and perform them all
+  });
+ </script>
+</body>
+
+</html>
