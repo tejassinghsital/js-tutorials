@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+</head>
+
+<body>
+
+ <p id="output">GiveAway in 20 Seconds</p>
+
+ <button id="Startbtn" onclick="myVar=setTimeout(startFx,20000)">Start</button>
+ <br>
+ <button id="Stopbtn" onclick="clearTimeout(myVar)">Stop </button>
+
+
+ <script>
+  let startFx = () => {
+   document.getElementById('output').innerHTML = `boom 20 seconds are over and you are the only participant so you are the winner and cos you also wrote this code so you kind of deserve that too becaus eyou made this small progrma after understanding shitty tutorial of over 10 hrs of technical thapa.`
+  };
+
+
+
+ </script>
+</body>
+
+</html>

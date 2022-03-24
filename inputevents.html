@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+</head>
+
+<body>
+
+
+ <form action="">
+
+  <!-- with onchange event listener method
+  <label for="nametype">Enter your name </label>
+  <input type="text" name="" id="nametype" placeholder="enter your name here...">
+  <br>
+  <label for="flavours">Liked ice creame flavour? </label>
+  <select name="ice-creame-flavours" onchange="ChangingEvent()" id="flavours">
+   <option value="select">Select one</option>
+   <option value="vanilla">Vanilla</option>
+   <option value="choclate">Choclate</option>
+   <option value="blueberry">Blueberry</option>
+  </select>
+
+  <p id="outputfield"></p>
+ </form> -->
+
+
+  <!-- with addEventListener method -->
+
+  <label for="nametype">Enter your name </label>
+  <input type="text" name="" id="nametype" placeholder="enter your name here...">
+  <br>
+  <label for="flavours">Liked ice creame flavour? </label>
+  <select name="ice-creame-flavours" id="flavours">
+   <option value="select">Select one</option>
+   <option value="vanilla">Vanilla</option>
+   <option value="choclate">Choclate</option>
+   <option value="blueberry">Blueberry</option>
+  </select>
+
+  <p id="outputfield"></p>
+ </form>
+
+
+ <script>
+
+  //js of onchange event with function method
+  // let ChangingEvent = () => {
+  //  let username = document.getElementById('nametype').value;
+  //  let flavour = document.getElementById("flavours").value;
+
+  //  document.getElementById('outputfield').innerHTML = `Mr. ${username} like ${flavour} flavoured icecreame`;
+  // }
+
+  // js of addEventListener method
+
+  let changingVar = document.getElementById('flavours');
+
+  changingVar.addEventListener('change', () => {
+
+   let username = document.getElementById('nametype').value;
+   let flavour = document.getElementById("flavours").value;
+
+   document.getElementById('outputfield').innerHTML = `Mr. ${username} like ${flavour} flavoured icecreame`;
+  });
+
+ </script>
+</body>
+
+</html>

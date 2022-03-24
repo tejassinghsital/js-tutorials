@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+</head>
+
+<body>
+
+
+ <div class="main-div">
+  <button class="child-of-main-div"> click me
+  </button>
+</body>
+
+</html>
+<script>
+
+ let div = document.querySelector(".main-div");
+ let btn = document.querySelector(".child-of-main-div");
+
+ const divFx = () => {
+  alert('this is alert of parent div')
+ }
+
+ const btnFx = () => {
+  alert('this is alert of child button');
+ }
+
+ div.addEventListener('click', divFx, true);
+ btn.addEventListener('click', btnFx, true);
+
+</script>

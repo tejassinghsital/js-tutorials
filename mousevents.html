@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .main-div {
+
+      width: 100 vw;
+      height: 100vh;
+      display: grid;
+      place-items: center;
+    }
+
+    #square {
+      height: 100px;
+      width: 100px;
+      background: grey;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main-div">
+    <div id="square" onmousedown="mDown()" onmouseenter="mEnter()" onmouseleave="mLeave()"></div>
+  </div>
+
+
+  </div>
+  <script>
+    let mEnter = () => document.getElementById("square").style.background = "green";
+
+    //mouse up here
+    let mUp = document.getElementById('square');
+    mUp.addEventListener('mouseup', () => mUp.style.background = "gold");
+
+    let mLeave = () => document.getElementById("square").style.background = "red";
+    let mDown = () => document.getElementById("square").style.background = "pink";
+
+    //mouse over(alternative to mouse enter but lso works with element childs too)
+    let mOver = document.getElementById("square");
+    mOver.addEventListener('mouseover', () => mOver.style.background = "purple");
+    //mouse out(alternative to mouse leave but lso works with element childs too)
+    let mOut = document.getElementById("square");
+    mOut.addEventListener('mouseout', () => mOut.style.background = "black");
+
+    //mousemove(samajh nahi aaya coordinates dene padte hai shayad)
+    // let mMove = document.getElementById('square');
+    // mMOve.addEventListener('mousemove', () => mMove.style.background = "orange");
+
+    //mousewheel also require some sort of coordinates like delta Y etc so leaving it for now hoping understand it later
+    // let mWheel = document.getElementById('square');
+    // mWheel.addEventListener('mousewheel', () => mWheel.style.background = "orange");
+
+  </script>
+
+</body>
+
+</html>

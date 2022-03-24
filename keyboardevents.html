@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+</head>
+
+<body>
+
+ <form action="">
+  <input class='textfield' onkeydown="downFx()" onkeyup="upFx()" onkeypress="pressFx()" type="text">
+  <p class="outputpress">Output of which key is pressed is shown here</p>
+
+  <p class="outputupdown">Output of state of key thai si up or down is shown here</p>
+ </form>
+ </form>
+
+
+ <script>
+  let pressFx = () => {
+   document.querySelector(".outputpress").innerHTML = `you pressed ${event.key} and it's code is ${event.code}`;
+
+  }
+
+  let downFx = () => {
+   document.querySelector(".outputupdown").innerHTML = `${event.key} is down`;
+
+  }
+  let upFx = () => {
+   let temp = document.querySelector(".outputupdown").innerHTML = `${event.key} is up`;
+
+  }
+ </script>
+</body>
+
+</html>
